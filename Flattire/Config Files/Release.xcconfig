@@ -1,0 +1,9 @@
+//
+//  Release.xcconfig
+//  Flattire
+//
+//  Created by Arsen Gasparyan on 14/02/16.
+//  Copyright © 2016 Arsen Gasparyan. All rights reserved.
+//
+
+CONFIG_NAME = Release

@@ -12,6 +12,9 @@
 		B8C8369B1C70E4DD00B1A82E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C836991C70E4DD00B1A82E /* Main.storyboard */; };
 		B8C8369D1C70E4DD00B1A82E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8C8369C1C70E4DD00B1A82E /* Assets.xcassets */; };
 		B8C836A01C70E4DD00B1A82E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C8369E1C70E4DD00B1A82E /* LaunchScreen.storyboard */; };
+		B8FA8A611C722129004A8DE9 /* Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8FA8A601C722129004A8DE9 /* Debug.plist */; };
+		B8FA8A631C722132004A8DE9 /* AdHoc.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8FA8A621C722132004A8DE9 /* AdHoc.plist */; };
+		B8FA8A651C72213B004A8DE9 /* Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8FA8A641C72213B004A8DE9 /* Release.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,12 @@
 		B8C8369C1C70E4DD00B1A82E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8C8369F1C70E4DD00B1A82E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8C836A11C70E4DD00B1A82E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8C836AC1C710D7200B1A82E /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = "Config Files/Debug.xcconfig"; sourceTree = "<group>"; };
+		B8C836AE1C710D8300B1A82E /* AdHoc.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = AdHoc.xcconfig; path = "Config Files/AdHoc.xcconfig"; sourceTree = "<group>"; };
+		B8C836B01C710D9200B1A82E /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = "Config Files/Release.xcconfig"; sourceTree = "<group>"; };
+		B8FA8A601C722129004A8DE9 /* Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Debug.plist; path = "Config Files/Debug.plist"; sourceTree = "<group>"; };
+		B8FA8A621C722132004A8DE9 /* AdHoc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AdHoc.plist; path = "Config Files/AdHoc.plist"; sourceTree = "<group>"; };
+		B8FA8A641C72213B004A8DE9 /* Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Release.plist; path = "Config Files/Release.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +63,7 @@
 		B8C836941C70E4DD00B1A82E /* Flattire */ = {
 			isa = PBXGroup;
 			children = (
+				B8C836AB1C710D3000B1A82E /* Config Files */,
 				B8C836951C70E4DD00B1A82E /* AppDelegate.swift */,
 				B8C836971C70E4DD00B1A82E /* ViewController.swift */,
 				B8C836991C70E4DD00B1A82E /* Main.storyboard */,
@@ -62,6 +72,19 @@
 				B8C836A11C70E4DD00B1A82E /* Info.plist */,
 			);
 			path = Flattire;
+			sourceTree = "<group>";
+		};
+		B8C836AB1C710D3000B1A82E /* Config Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8C836AC1C710D7200B1A82E /* Debug.xcconfig */,
+				B8C836AE1C710D8300B1A82E /* AdHoc.xcconfig */,
+				B8C836B01C710D9200B1A82E /* Release.xcconfig */,
+				B8FA8A601C722129004A8DE9 /* Debug.plist */,
+				B8FA8A621C722132004A8DE9 /* AdHoc.plist */,
+				B8FA8A641C72213B004A8DE9 /* Release.plist */,
+			);
+			name = "Config Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +145,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8FA8A611C722129004A8DE9 /* Debug.plist in Resources */,
 				B8C836A01C70E4DD00B1A82E /* LaunchScreen.storyboard in Resources */,
+				B8FA8A631C722132004A8DE9 /* AdHoc.plist in Resources */,
 				B8C8369D1C70E4DD00B1A82E /* Assets.xcassets in Resources */,
+				B8FA8A651C72213B004A8DE9 /* Release.plist in Resources */,
 				B8C8369B1C70E4DD00B1A82E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +271,7 @@
 		};
 		B8C836A51C70E4DD00B1A82E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8C836AC1C710D7200B1A82E /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Flattire/Info.plist;
@@ -256,6 +283,7 @@
 		};
 		B8C836A61C70E4DD00B1A82E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8C836B01C710D9200B1A82E /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Flattire/Info.plist;
@@ -265,6 +293,62 @@
 			};
 			name = Release;
 		};
+		B8C836A91C710D0F00B1A82E /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = AdHoc;
+		};
+		B8C836AA1C710D0F00B1A82E /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8C836AE1C710D8300B1A82E /* AdHoc.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Flattire/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arsengasparyan.Flattire;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = AdHoc;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -272,6 +356,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8C836A21C70E4DD00B1A82E /* Debug */,
+				B8C836A91C710D0F00B1A82E /* AdHoc */,
 				B8C836A31C70E4DD00B1A82E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -281,9 +366,11 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8C836A51C70E4DD00B1A82E /* Debug */,
+				B8C836AA1C710D0F00B1A82E /* AdHoc */,
 				B8C836A61C70E4DD00B1A82E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
