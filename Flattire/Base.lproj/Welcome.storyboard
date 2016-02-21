@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NxL-x8-foM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome Controller-->
+        <scene sceneID="Qe3-Ng-ebO">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="NxL-x8-foM" customClass="WelcomeController" customModule="Flattire" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6fK-eZ-3ku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="362.5" y="371.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="scW-wy-GYH">
+            <objects>
+                <viewController storyboardIdentifier="Introduction" id="fXN-Ui-y1o" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R1n-yJ-fTj"/>
+                        <viewControllerLayoutGuide type="bottom" id="csb-a1-x1r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iPS-gS-0Fr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мы помогаем людям попаваим в трудную ситуацию на дороге" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdc-Bc-IxQ">
+                                <rect key="frame" x="16" y="313" width="343" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="mdc-Bc-IxQ" secondAttribute="leading" id="FDW-Iy-zZ4"/>
+                            <constraint firstItem="mdc-Bc-IxQ" firstAttribute="centerX" secondItem="iPS-gS-0Fr" secondAttribute="centerX" id="TDB-6b-J1r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mdc-Bc-IxQ" secondAttribute="trailing" id="cAD-Ql-zXx"/>
+                            <constraint firstItem="mdc-Bc-IxQ" firstAttribute="centerY" secondItem="iPS-gS-0Fr" secondAttribute="centerY" id="rf1-8M-bI8"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jdW-nd-U06" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800.5" y="371.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IWi-88-Fzi">
+            <objects>
+                <viewController storyboardIdentifier="RequestLocation" id="dkB-Eo-SgX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5vK-9A-l5m"/>
+                        <viewControllerLayoutGuide type="bottom" id="hiN-XD-Y2b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nNC-oe-bqH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нужна локаця" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8El-IH-0p6">
+                                <rect key="frame" x="16" y="323.5" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8El-IH-0p6" firstAttribute="leading" secondItem="nNC-oe-bqH" secondAttribute="leadingMargin" id="4Gy-dq-kJd"/>
+                            <constraint firstItem="8El-IH-0p6" firstAttribute="trailing" secondItem="nNC-oe-bqH" secondAttribute="trailingMargin" id="DuU-s3-lE6"/>
+                            <constraint firstItem="8El-IH-0p6" firstAttribute="centerY" secondItem="nNC-oe-bqH" secondAttribute="centerY" id="xoa-mE-bZp"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X0b-g9-Yol" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224.5" y="371.5"/>
+        </scene>
+    </scenes>
+</document>

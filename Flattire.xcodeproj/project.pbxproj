@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B84874041C79B5520012497A /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84874021C79B5520012497A /* Welcome.storyboard */; };
+		B84874061C79B64A0012497A /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84874051C79B64A0012497A /* WelcomeController.swift */; };
 		B896FA5A1C79A78C0012DF80 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896FA591C79A78C0012DF80 /* MapController.swift */; };
 		B8C836961C70E4DD00B1A82E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C836951C70E4DD00B1A82E /* AppDelegate.swift */; };
 		B8C8369B1C70E4DD00B1A82E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C836991C70E4DD00B1A82E /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B84874031C79B5520012497A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Welcome.storyboard; sourceTree = "<group>"; };
+		B84874051C79B64A0012497A /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		B896FA591C79A78C0012DF80 /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapController.swift; path = ../../../flattire/mobile/Flattire/MapController.swift; sourceTree = "<group>"; };
 		B8C836921C70E4DD00B1A82E /* Flattire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flattire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C836951C70E4DD00B1A82E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 				B8C8369E1C70E4DD00B1A82E /* LaunchScreen.storyboard */,
 				B8C836A11C70E4DD00B1A82E /* Info.plist */,
 				B896FA591C79A78C0012DF80 /* MapController.swift */,
+				B84874021C79B5520012497A /* Welcome.storyboard */,
+				B84874051C79B64A0012497A /* WelcomeController.swift */,
 			);
 			path = Flattire;
 			sourceTree = "<group>";
@@ -151,6 +157,7 @@
 				B8C8369D1C70E4DD00B1A82E /* Assets.xcassets in Resources */,
 				B8FA8A651C72213B004A8DE9 /* Release.plist in Resources */,
 				B8C8369B1C70E4DD00B1A82E /* Main.storyboard in Resources */,
+				B84874041C79B5520012497A /* Welcome.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84874061C79B64A0012497A /* WelcomeController.swift in Sources */,
 				B896FA5A1C79A78C0012DF80 /* MapController.swift in Sources */,
 				B8C836961C70E4DD00B1A82E /* AppDelegate.swift in Sources */,
 			);
@@ -169,6 +177,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B84874021C79B5520012497A /* Welcome.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B84874031C79B5520012497A /* Base */,
+			);
+			name = Welcome.storyboard;
+			sourceTree = "<group>";
+		};
 		B8C836991C70E4DD00B1A82E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
