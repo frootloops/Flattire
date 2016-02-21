@@ -26,9 +26,17 @@ class MapController: UIViewController {
     // MARK: - Actions
     
     @IBAction func zoomIn(sender: UIButton) {
+        var region = mapView.region
+        region.span.latitudeDelta /= 3.0
+        region.span.longitudeDelta /= 3.0
+        mapView.setRegion(region, animated: true)
     }
     
     @IBAction func zoomOut(sender: UIButton) {
+        var region = mapView.region
+        region.span.latitudeDelta = min(region.span.latitudeDelta  * 3.0, 180.0)
+        region.span.longitudeDelta = min(region.span.longitudeDelta  * 3.0, 180.0)
+        mapView.setRegion(region, animated: true)
     }
     
     @IBAction func findMe(sender: UIButton) {
