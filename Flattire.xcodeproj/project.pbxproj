@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B896FA581C7999C60012DF80 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B896FA571C7999C60012DF80 /* MapKit.framework */; };
+		B896FA5A1C79A78C0012DF80 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896FA591C79A78C0012DF80 /* MapController.swift */; };
 		B8C836961C70E4DD00B1A82E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C836951C70E4DD00B1A82E /* AppDelegate.swift */; };
-		B8C836981C70E4DD00B1A82E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C836971C70E4DD00B1A82E /* ViewController.swift */; };
 		B8C8369B1C70E4DD00B1A82E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C836991C70E4DD00B1A82E /* Main.storyboard */; };
 		B8C8369D1C70E4DD00B1A82E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8C8369C1C70E4DD00B1A82E /* Assets.xcassets */; };
 		B8C836A01C70E4DD00B1A82E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C8369E1C70E4DD00B1A82E /* LaunchScreen.storyboard */; };
@@ -20,9 +20,9 @@
 
 /* Begin PBXFileReference section */
 		B896FA571C7999C60012DF80 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B896FA591C79A78C0012DF80 /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapController.swift; path = ../../../flattire/mobile/Flattire/MapController.swift; sourceTree = "<group>"; };
 		B8C836921C70E4DD00B1A82E /* Flattire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flattire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C836951C70E4DD00B1A82E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B8C836971C70E4DD00B1A82E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B8C8369A1C70E4DD00B1A82E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8C8369C1C70E4DD00B1A82E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8C8369F1C70E4DD00B1A82E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,11 +69,11 @@
 			children = (
 				B8C836AB1C710D3000B1A82E /* Config Files */,
 				B8C836951C70E4DD00B1A82E /* AppDelegate.swift */,
-				B8C836971C70E4DD00B1A82E /* ViewController.swift */,
 				B8C836991C70E4DD00B1A82E /* Main.storyboard */,
 				B8C8369C1C70E4DD00B1A82E /* Assets.xcassets */,
 				B8C8369E1C70E4DD00B1A82E /* LaunchScreen.storyboard */,
 				B8C836A11C70E4DD00B1A82E /* Info.plist */,
+				B896FA591C79A78C0012DF80 /* MapController.swift */,
 			);
 			path = Flattire;
 			sourceTree = "<group>";
@@ -165,7 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8C836981C70E4DD00B1A82E /* ViewController.swift in Sources */,
+				B896FA5A1C79A78C0012DF80 /* MapController.swift in Sources */,
 				B8C836961C70E4DD00B1A82E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
