@@ -8,19 +8,19 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class MapController: UIViewController {
+class MapController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
+    
+    private let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
     }
     
     // MARK: - Actions
@@ -40,7 +40,16 @@ class MapController: UIViewController {
     }
     
     @IBAction func findMe(sender: UIButton) {
+        var region = mapView.region
+        region.center = mapView.userLocation.coordinate
+        region.span.latitudeDelta = 0.02
+        region.span.longitudeDelta = 0.02
+        mapView.setRegion(region, animated: true)
     }
+    
+    // MARK: - CLLocationManagerDelegate
+    
+    
     
 
     /*

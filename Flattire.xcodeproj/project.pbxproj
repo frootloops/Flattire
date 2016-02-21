@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B896FA581C7999C60012DF80 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B896FA571C7999C60012DF80 /* MapKit.framework */; };
 		B896FA5A1C79A78C0012DF80 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896FA591C79A78C0012DF80 /* MapController.swift */; };
 		B8C836961C70E4DD00B1A82E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C836951C70E4DD00B1A82E /* AppDelegate.swift */; };
 		B8C8369B1C70E4DD00B1A82E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C836991C70E4DD00B1A82E /* Main.storyboard */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B896FA571C7999C60012DF80 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B896FA591C79A78C0012DF80 /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapController.swift; path = ../../../flattire/mobile/Flattire/MapController.swift; sourceTree = "<group>"; };
 		B8C836921C70E4DD00B1A82E /* Flattire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flattire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C836951C70E4DD00B1A82E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +38,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B896FA581C7999C60012DF80 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +47,6 @@
 		B8C836891C70E4DD00B1A82E = {
 			isa = PBXGroup;
 			children = (
-				B896FA571C7999C60012DF80 /* MapKit.framework */,
 				B8C836941C70E4DD00B1A82E /* Flattire */,
 				B8C836931C70E4DD00B1A82E /* Products */,
 			);
@@ -279,6 +275,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Flattire/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arsengasparyan.Flattire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,6 +288,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Flattire/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arsengasparyan.Flattire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -347,6 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Flattire/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arsengasparyan.Flattire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
