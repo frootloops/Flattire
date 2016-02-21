@@ -10,6 +10,7 @@
 		B84874041C79B5520012497A /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84874021C79B5520012497A /* Welcome.storyboard */; };
 		B84874061C79B64A0012497A /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84874051C79B64A0012497A /* WelcomeController.swift */; };
 		B84874091C7A2E9E0012497A /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84874081C7A2E9E0012497A /* SwiftyUserDefaults.framework */; };
+		B848740B1C7A2F120012497A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848740A1C7A2F120012497A /* UserDefaults.swift */; };
 		B896FA5A1C79A78C0012DF80 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896FA591C79A78C0012DF80 /* MapController.swift */; };
 		B8C836961C70E4DD00B1A82E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C836951C70E4DD00B1A82E /* AppDelegate.swift */; };
 		B8C8369B1C70E4DD00B1A82E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C836991C70E4DD00B1A82E /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		B84874031C79B5520012497A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Welcome.storyboard; sourceTree = "<group>"; };
 		B84874051C79B64A0012497A /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		B84874081C7A2E9E0012497A /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
+		B848740A1C7A2F120012497A /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		B896FA591C79A78C0012DF80 /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapController.swift; path = ../../../flattire/mobile/Flattire/MapController.swift; sourceTree = "<group>"; };
 		B8C836921C70E4DD00B1A82E /* Flattire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flattire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C836951C70E4DD00B1A82E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				B896FA591C79A78C0012DF80 /* MapController.swift */,
 				B84874021C79B5520012497A /* Welcome.storyboard */,
 				B84874051C79B64A0012497A /* WelcomeController.swift */,
+				B848740A1C7A2F120012497A /* UserDefaults.swift */,
 			);
 			path = Flattire;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B848740B1C7A2F120012497A /* UserDefaults.swift in Sources */,
 				B84874061C79B64A0012497A /* WelcomeController.swift in Sources */,
 				B896FA5A1C79A78C0012DF80 /* MapController.swift in Sources */,
 				B8C836961C70E4DD00B1A82E /* AppDelegate.swift in Sources */,
