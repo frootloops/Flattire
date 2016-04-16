@@ -28,7 +28,13 @@ class WelcomeController: UIViewController {
 
 
     @IBAction func begin(sender: UIButton) {
-        
+        let main = UIStoryboard(name: "Main", bundle: .mainBundle())
+        guard let window = UIApplication.sharedApplication().delegate?.window,
+            vc = main.instantiateInitialViewController() else { return }
+            
+        UIView.transitionFromView(view, toView: vc.view, duration: 0.5, options: .CurveLinear) { _ in
+            window?.rootViewController = vc
+        }
     }
     
     func didChangePageControlValue() {
