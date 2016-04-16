@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B81DC0031CC2C59E00493565 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B81DC0021CC2C59E00493565 /* Alamofire.framework */; };
+		B81DC0071CC2D47100493565 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DC0061CC2D47100493565 /* WelcomeController.swift */; };
 		B84874041C79B5520012497A /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84874021C79B5520012497A /* Welcome.storyboard */; };
-		B84874061C79B64A0012497A /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84874051C79B64A0012497A /* WelcomeController.swift */; };
+		B84874061C79B64A0012497A /* WelcomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84874051C79B64A0012497A /* WelcomePageController.swift */; };
 		B84874091C7A2E9E0012497A /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84874081C7A2E9E0012497A /* SwiftyUserDefaults.framework */; };
 		B848740B1C7A2F120012497A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848740A1C7A2F120012497A /* UserDefaults.swift */; };
 		B896FA5A1C79A78C0012DF80 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896FA591C79A78C0012DF80 /* MapController.swift */; };
@@ -24,8 +25,9 @@
 
 /* Begin PBXFileReference section */
 		B81DC0021CC2C59E00493565 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		B81DC0061CC2D47100493565 /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		B84874031C79B5520012497A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Welcome.storyboard; sourceTree = "<group>"; };
-		B84874051C79B64A0012497A /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
+		B84874051C79B64A0012497A /* WelcomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageController.swift; sourceTree = "<group>"; };
 		B84874081C7A2E9E0012497A /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 		B848740A1C7A2F120012497A /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		B896FA591C79A78C0012DF80 /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapController.swift; path = ../../../flattire/mobile/Flattire/MapController.swift; sourceTree = "<group>"; };
@@ -85,8 +87,9 @@
 				B8C836A11C70E4DD00B1A82E /* Info.plist */,
 				B896FA591C79A78C0012DF80 /* MapController.swift */,
 				B84874021C79B5520012497A /* Welcome.storyboard */,
-				B84874051C79B64A0012497A /* WelcomeController.swift */,
+				B84874051C79B64A0012497A /* WelcomePageController.swift */,
 				B848740A1C7A2F120012497A /* UserDefaults.swift */,
+				B81DC0061CC2D47100493565 /* WelcomeController.swift */,
 			);
 			path = Flattire;
 			sourceTree = "<group>";
@@ -200,7 +203,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B848740B1C7A2F120012497A /* UserDefaults.swift in Sources */,
-				B84874061C79B64A0012497A /* WelcomeController.swift in Sources */,
+				B81DC0071CC2D47100493565 /* WelcomeController.swift in Sources */,
+				B84874061C79B64A0012497A /* WelcomePageController.swift in Sources */,
 				B896FA5A1C79A78C0012DF80 /* MapController.swift in Sources */,
 				B8C836961C70E4DD00B1A82E /* AppDelegate.swift in Sources */,
 			);

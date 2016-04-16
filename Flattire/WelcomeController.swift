@@ -2,51 +2,59 @@
 //  WelcomeController.swift
 //  Flattire
 //
-//  Created by Arsen Gasparyan on 21/02/16.
+//  Created by Arsen Gasparyan on 16/04/16.
 //  Copyright © 2016 Arsen Gasparyan. All rights reserved.
 //
 
 import UIKit
 
-class WelcomeController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
-    private var pages = [UIViewController]()
+class WelcomeController: UIViewController {
 
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var containverView: UIView!
+    
+    var welcomePageViewController: WelcomePageController? {
+        didSet {
+            welcomePageViewController?.welcomeDelegate = self
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let action = #selector(WelcomeController.didChangePageControlValue)
+        pageControl.addTarget(self, action: action, forControlEvents: .ValueChanged)
+    }
 
-        pages.append(storyboard!.instantiateViewControllerWithIdentifier("Introduction"))
-        pages.append(storyboard!.instantiateViewControllerWithIdentifier("RequestLocation"))
-        
-        dataSource = self
-        setViewControllers([pages[0]], direction: .Forward, animated: false, completion: nil)
-    }
-    
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        
-        if let index = pages.indexOf(viewController) where index >= 1 {
-            return pages[index - 1]
-        }
-        
-        return .None
-    }
-    
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        if let index = pages.indexOf(viewController) where index <= pages.count - 2 {
-            return pages[index + 1]
-        }
-        
-        return .None
-    }
-    
 
-    /*
+    @IBAction func begin(sender: UIButton) {
+        
+    }
+    
+    func didChangePageControlValue() {
+        welcomePageViewController?.scrollToViewController(index: pageControl.currentPage)
+    }
+
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let welcomePageViewController = segue.destinationViewController as? WelcomePageController {
+            self.welcomePageViewController = welcomePageViewController
+        }
     }
-    */
 
 }
+
+extension WelcomeController: WelcomePageControllerDelegate {
+    
+    func welcomePageViewController(tutorialPageViewController: WelcomePageController, didUpdatePageCount count: Int) {
+        pageControl.numberOfPages = count
+    }
+    
+    func welcomePageViewController(tutorialPageViewController: WelcomePageController, didUpdatePageIndex index: Int) {
+        pageControl.currentPage = index
+    }
+    
+}
+
