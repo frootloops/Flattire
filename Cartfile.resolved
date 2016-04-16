@@ -1,1 +1,2 @@
-github "radex/SwiftyUserDefaults" "2.0.0"
+github "Alamofire/Alamofire" "3.3.1"
+github "radex/SwiftyUserDefaults" "2.2.0"

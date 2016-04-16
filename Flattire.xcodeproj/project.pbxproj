@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B81DC0031CC2C59E00493565 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B81DC0021CC2C59E00493565 /* Alamofire.framework */; };
 		B84874041C79B5520012497A /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84874021C79B5520012497A /* Welcome.storyboard */; };
 		B84874061C79B64A0012497A /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84874051C79B64A0012497A /* WelcomeController.swift */; };
 		B84874091C7A2E9E0012497A /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84874081C7A2E9E0012497A /* SwiftyUserDefaults.framework */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B81DC0021CC2C59E00493565 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		B84874031C79B5520012497A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Welcome.storyboard; sourceTree = "<group>"; };
 		B84874051C79B64A0012497A /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		B84874081C7A2E9E0012497A /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B81DC0031CC2C59E00493565 /* Alamofire.framework in Frameworks */,
 				B84874091C7A2E9E0012497A /* SwiftyUserDefaults.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,9 +59,10 @@
 		B8C836891C70E4DD00B1A82E = {
 			isa = PBXGroup;
 			children = (
-				B84874081C7A2E9E0012497A /* SwiftyUserDefaults.framework */,
 				B8C836941C70E4DD00B1A82E /* Flattire */,
 				B8C836931C70E4DD00B1A82E /* Products */,
+				B81DC0021CC2C59E00493565 /* Alamofire.framework */,
+				B84874081C7A2E9E0012497A /* SwiftyUserDefaults.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +183,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (

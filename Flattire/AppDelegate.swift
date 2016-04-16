@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyUserDefaults
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
