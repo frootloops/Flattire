@@ -10,17 +10,19 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapController: UIViewController, CLLocationManagerDelegate {
+class MapController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     private let locationManager = CLLocationManager()
+    private var needToMoveToUserLocation = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        prepareForUse()
         
+        mapView.delegate = self
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
     }
     
     // MARK: - Actions
@@ -40,26 +42,46 @@ class MapController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func findMe(sender: UIButton) {
+        moveToUserLocation()
+    }
+}
+
+private extension MapController {
+    // MARK: - Helpers
+    
+    private func prepareForUse() {
+        let center = CLLocationCoordinate2D(latitude: 55.75367, longitude: 37.620565)
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: center, span: span)
+        mapView.setRegion(region, animated: false)
+    }
+    
+    private func moveToUserLocation() {
         var region = mapView.region
         region.center = mapView.userLocation.coordinate
         region.span.latitudeDelta = 0.02
         region.span.longitudeDelta = 0.02
         mapView.setRegion(region, animated: true)
     }
+}
+
+extension MapController: MKMapViewDelegate {
+    // MARK: - MKMapViewDelegate
     
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        guard needToMoveToUserLocation else { return }
+        needToMoveToUserLocation = false
+        moveToUserLocation()
+    }
+}
+
+extension MapController: CLLocationManagerDelegate {
     // MARK: - CLLocationManagerDelegate
     
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
+            locationManager.startUpdatingLocation()
+        }
     }
-    */
 
 }

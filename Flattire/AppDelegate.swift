@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Helpers
     
     private func changeStoryboardIfNeeded() {
-//        guard !Defaults[.hasLaunchedOnce] else { return }
-//        Defaults[.hasLaunchedOnce] = true
+        guard !Defaults[.hasLaunchedOnce] else { return }
+        Defaults[.hasLaunchedOnce] = true
         
         let welcome = UIStoryboard(name: "Welcome", bundle: .mainBundle())
         window?.rootViewController = welcome.instantiateInitialViewController()
