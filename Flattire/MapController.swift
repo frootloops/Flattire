@@ -14,23 +14,20 @@ import AlamofireObjectMapper
 
 class MapController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var productsCollectionView: UICollectionView!
     
     private let locationManager = CLLocationManager()
     private var needToMoveToUserLocation = true
+    private var products = [UberProduct]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareForUse()
+        loadProducts()
         
         mapView.delegate = self
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
-        
-        Alamofire.request(UberProductsRouter.Get(55.752411, 37.625886)).responseObject { (response: Response<ProductsResponse, NSError>) in
-            if let productsResponse = response.result.value {
-                print(productsResponse.products)
-            }
-        }
     }
     
     // MARK: - Actions
@@ -54,6 +51,30 @@ class MapController: UIViewController {
     }
 }
 
+extension MapController: UICollectionViewDataSource {
+    // MARK: UICollectionViewDataSource
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return products.count
+    }
+    
+    // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Product", forIndexPath: indexPath) as? ProductCell else { fatalError() }
+        cell.product = products[indexPath.row]
+        return cell
+    }
+}
+
+extension MapController: UICollectionViewDelegateFlowLayout {
+    // MARK: UICollectionViewDelegateFlowLayout
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSize(width: 200, height: 100)
+    }
+}
+
 private extension MapController {
     // MARK: - Helpers
     
@@ -62,6 +83,9 @@ private extension MapController {
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion(center: center, span: span)
         mapView.setRegion(region, animated: false)
+        
+        let productCell = UINib(nibName: "ProductCell", bundle: .mainBundle())
+        productsCollectionView.registerNib(productCell, forCellWithReuseIdentifier: "Product")
     }
     
     private func moveToUserLocation() {
@@ -70,6 +94,17 @@ private extension MapController {
         region.span.latitudeDelta = 0.02
         region.span.longitudeDelta = 0.02
         mapView.setRegion(region, animated: true)
+    }
+    
+    private func loadProducts() {
+        let request = Alamofire.request(UberProductsRouter.Get(55.752411, 37.625886))
+        request.responseObject { [weak self] (response: Response<ProductsResponse, NSError>) in
+            guard let `self` = self else { return }
+            if let productsResponse = response.result.value {
+                self.products = productsResponse.products
+                self.productsCollectionView.reloadData()
+            }
+        }
     }
 }
 

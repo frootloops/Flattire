@@ -15,6 +15,8 @@
 		B83A91981CD8D24E00BCF758 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83A91961CD8D24E00BCF758 /* ObjectMapper.framework */; };
 		B83A919A1CD8D35600BCF758 /* UberProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A91991CD8D35600BCF758 /* UberProduct.swift */; };
 		B83A919C1CD9067900BCF758 /* ProductsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A919B1CD9067900BCF758 /* ProductsResponse.swift */; };
+		B83A91A01CD9105000BCF758 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A919E1CD9105000BCF758 /* ProductCell.swift */; };
+		B83A91A11CD9105000BCF758 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83A919F1CD9105000BCF758 /* ProductCell.xib */; };
 		B84874041C79B5520012497A /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84874021C79B5520012497A /* Welcome.storyboard */; };
 		B84874061C79B64A0012497A /* WelcomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84874051C79B64A0012497A /* WelcomePageController.swift */; };
 		B84874091C7A2E9E0012497A /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84874081C7A2E9E0012497A /* SwiftyUserDefaults.framework */; };
@@ -38,6 +40,8 @@
 		B83A91961CD8D24E00BCF758 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		B83A91991CD8D35600BCF758 /* UberProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UberProduct.swift; sourceTree = "<group>"; };
 		B83A919B1CD9067900BCF758 /* ProductsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsResponse.swift; sourceTree = "<group>"; };
+		B83A919E1CD9105000BCF758 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		B83A919F1CD9105000BCF758 /* ProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		B84874031C79B5520012497A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Welcome.storyboard; sourceTree = "<group>"; };
 		B84874051C79B64A0012497A /* WelcomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageController.swift; sourceTree = "<group>"; };
 		B84874081C7A2E9E0012497A /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				B81DC00A1CC38A2500493565 /* UberProductsRouter.swift */,
 				B83A91991CD8D35600BCF758 /* UberProduct.swift */,
 				B83A919B1CD9067900BCF758 /* ProductsResponse.swift */,
+				B83A919E1CD9105000BCF758 /* ProductCell.swift */,
+				B83A919F1CD9105000BCF758 /* ProductCell.xib */,
 			);
 			path = Flattire;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8FA8A611C722129004A8DE9 /* Debug.plist in Resources */,
+				B83A91A11CD9105000BCF758 /* ProductCell.xib in Resources */,
 				B8C836A01C70E4DD00B1A82E /* LaunchScreen.storyboard in Resources */,
 				B8FA8A631C722132004A8DE9 /* AdHoc.plist in Resources */,
 				B8C8369D1C70E4DD00B1A82E /* Assets.xcassets in Resources */,
@@ -239,6 +246,7 @@
 				B81DC00B1CC38A2500493565 /* UberProductsRouter.swift in Sources */,
 				B81DC0091CC3899B00493565 /* UberManager.swift in Sources */,
 				B896FA5A1C79A78C0012DF80 /* MapController.swift in Sources */,
+				B83A91A01CD9105000BCF758 /* ProductCell.swift in Sources */,
 				B83A919C1CD9067900BCF758 /* ProductsResponse.swift in Sources */,
 				B8C836961C70E4DD00B1A82E /* AppDelegate.swift in Sources */,
 			);

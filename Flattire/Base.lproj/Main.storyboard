@@ -41,16 +41,37 @@
                                     <action selector="findMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ztg-Cv-lzA"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WER-dU-t1E">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HwP-Un-2C6"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1fP-Oz-aCR">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="KJb-sD-dO3"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lhl-ga-Ahp"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BvV-qG-DM0" firstAttribute="leading" secondItem="Kbg-MT-v0D" secondAttribute="leading" id="0MS-Du-DA5"/>
                             <constraint firstItem="GSv-Us-dGe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3Se-Ag-hp7"/>
                             <constraint firstAttribute="trailing" secondItem="Kbg-MT-v0D" secondAttribute="trailing" id="ABa-1D-j60"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WER-dU-t1E" secondAttribute="bottom" id="JVe-YG-mzC"/>
                             <constraint firstItem="GSv-Us-dGe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="L7q-LI-JGd"/>
                             <constraint firstItem="kLz-Ax-gHQ" firstAttribute="leading" secondItem="Kbg-MT-v0D" secondAttribute="leading" id="LOo-Ps-CA1"/>
+                            <constraint firstAttribute="trailing" secondItem="WER-dU-t1E" secondAttribute="trailing" id="LbA-ag-2K8"/>
                             <constraint firstItem="BvV-qG-DM0" firstAttribute="top" secondItem="Kbg-MT-v0D" secondAttribute="bottom" id="TOA-HT-YAM"/>
                             <constraint firstItem="Kbg-MT-v0D" firstAttribute="top" secondItem="kLz-Ax-gHQ" secondAttribute="bottom" id="d6c-3o-neY"/>
+                            <constraint firstItem="WER-dU-t1E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i8a-mI-ACe"/>
                             <constraint firstItem="GSv-Us-dGe" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="lSx-xJ-MI9"/>
                             <constraint firstItem="Kbg-MT-v0D" firstAttribute="centerY" secondItem="GSv-Us-dGe" secondAttribute="centerY" id="nL0-u1-ukz"/>
                             <constraint firstAttribute="trailing" secondItem="GSv-Us-dGe" secondAttribute="trailing" id="uhI-W6-qBX"/>
@@ -59,6 +80,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="mapView" destination="GSv-Us-dGe" id="PVh-qd-uz6"/>
+                        <outlet property="productsCollectionView" destination="WER-dU-t1E" id="2K6-qJ-gOx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
