@@ -72,15 +72,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B8C836891C70E4DD00B1A82E = {
+		B83A919D1CD90EB300BCF758 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				B83A91951CD8D24E00BCF758 /* AlamofireObjectMapper.framework */,
 				B83A91961CD8D24E00BCF758 /* ObjectMapper.framework */,
-				B8C836941C70E4DD00B1A82E /* Flattire */,
-				B8C836931C70E4DD00B1A82E /* Products */,
 				B81DC0021CC2C59E00493565 /* Alamofire.framework */,
 				B84874081C7A2E9E0012497A /* SwiftyUserDefaults.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8C836891C70E4DD00B1A82E = {
+			isa = PBXGroup;
+			children = (
+				B8C836941C70E4DD00B1A82E /* Flattire */,
+				B8C836931C70E4DD00B1A82E /* Products */,
+				B83A919D1CD90EB300BCF758 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
