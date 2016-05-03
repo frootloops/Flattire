@@ -11,6 +11,8 @@
 		B81DC0071CC2D47100493565 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DC0061CC2D47100493565 /* WelcomeController.swift */; };
 		B81DC0091CC3899B00493565 /* UberManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DC0081CC3899B00493565 /* UberManager.swift */; };
 		B81DC00B1CC38A2500493565 /* UberProductsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DC00A1CC38A2500493565 /* UberProductsRouter.swift */; };
+		B83A91971CD8D24E00BCF758 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83A91951CD8D24E00BCF758 /* AlamofireObjectMapper.framework */; };
+		B83A91981CD8D24E00BCF758 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83A91961CD8D24E00BCF758 /* ObjectMapper.framework */; };
 		B84874041C79B5520012497A /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84874021C79B5520012497A /* Welcome.storyboard */; };
 		B84874061C79B64A0012497A /* WelcomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84874051C79B64A0012497A /* WelcomePageController.swift */; };
 		B84874091C7A2E9E0012497A /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84874081C7A2E9E0012497A /* SwiftyUserDefaults.framework */; };
@@ -30,6 +32,8 @@
 		B81DC0061CC2D47100493565 /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		B81DC0081CC3899B00493565 /* UberManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UberManager.swift; sourceTree = "<group>"; };
 		B81DC00A1CC38A2500493565 /* UberProductsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UberProductsRouter.swift; sourceTree = "<group>"; };
+		B83A91951CD8D24E00BCF758 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		B83A91961CD8D24E00BCF758 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		B84874031C79B5520012497A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Welcome.storyboard; sourceTree = "<group>"; };
 		B84874051C79B64A0012497A /* WelcomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageController.swift; sourceTree = "<group>"; };
 		B84874081C7A2E9E0012497A /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83A91971CD8D24E00BCF758 /* AlamofireObjectMapper.framework in Frameworks */,
+				B83A91981CD8D24E00BCF758 /* ObjectMapper.framework in Frameworks */,
 				B81DC0031CC2C59E00493565 /* Alamofire.framework in Frameworks */,
 				B84874091C7A2E9E0012497A /* SwiftyUserDefaults.framework in Frameworks */,
 			);
@@ -65,6 +71,8 @@
 		B8C836891C70E4DD00B1A82E = {
 			isa = PBXGroup;
 			children = (
+				B83A91951CD8D24E00BCF758 /* AlamofireObjectMapper.framework */,
+				B83A91961CD8D24E00BCF758 /* ObjectMapper.framework */,
 				B8C836941C70E4DD00B1A82E /* Flattire */,
 				B8C836931C70E4DD00B1A82E /* Products */,
 				B81DC0021CC2C59E00493565 /* Alamofire.framework */,
@@ -193,6 +201,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (

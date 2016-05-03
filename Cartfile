@@ -1,2 +1,3 @@
 github "radex/SwiftyUserDefaults"
 github "Alamofire/Alamofire"
+github "tristanhimmelman/AlamofireObjectMapper"
