@@ -14,12 +14,13 @@ import Alamofire
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         changeStoryboardIfNeeded()
         return true
     }
+}
 
+private extension AppDelegate {
     // MARK: Helpers
     
     private func changeStoryboardIfNeeded() {
