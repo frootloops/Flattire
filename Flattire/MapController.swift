@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Alamofire
 
 class MapController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
@@ -23,6 +24,14 @@ class MapController: UIViewController {
         mapView.delegate = self
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
+    
+        Alamofire.request(UberProductsRouter.Get(55.752411, 37.625886)).responseJSON { response in
+            print(response.request)
+            print(response.response)
+            print(response.data)
+            print(response.result)
+        }
+        
     }
     
     // MARK: - Actions

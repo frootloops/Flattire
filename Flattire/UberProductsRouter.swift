@@ -17,15 +17,19 @@ enum UberProductsRouter: URLRequestConvertible {
     case Get(CLLocationDegrees, CLLocationDegrees)
     
     var method: Alamofire.Method {
+        return .GET
+    }
+    
+    var parameters: [String: AnyObject] {
         switch self {
-        case .Get: return .GET
+        case .Get(let latitude, let longitude):
+            return ["latitude": latitude, "longitude": longitude]
         }
     }
     
-    var path: String {
+    private var path: String {
         switch self {
-        case .Get(let latitude, let longitude):
-            return "/products?latitude=\(latitude)&longitude=\(longitude)"
+        case .Get: return "/products"
         }
     }
     
@@ -37,6 +41,7 @@ enum UberProductsRouter: URLRequestConvertible {
         request.HTTPMethod = method.rawValue
         request.setValue("Token \(UberProductsRouter.serverToken)", forHTTPHeaderField: "Authorization")
         
-        return request
+        let encoding = Alamofire.ParameterEncoding.URL
+        return encoding.encode(request, parameters: parameters).0
     }
 }
