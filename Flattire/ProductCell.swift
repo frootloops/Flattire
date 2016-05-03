@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Haneke
 
 class ProductCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
@@ -16,6 +17,9 @@ class ProductCell: UICollectionViewCell {
         didSet {
             if let product = product {
                 label.text = product.displayName
+                if let url = NSURL(string: product.image) {
+                    imageView.hnk_setImageFromURL(url)
+                }
             }
         }
     }

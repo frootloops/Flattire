@@ -17,6 +17,7 @@
 		B83A919C1CD9067900BCF758 /* ProductsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A919B1CD9067900BCF758 /* ProductsResponse.swift */; };
 		B83A91A01CD9105000BCF758 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A919E1CD9105000BCF758 /* ProductCell.swift */; };
 		B83A91A11CD9105000BCF758 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83A919F1CD9105000BCF758 /* ProductCell.xib */; };
+		B83A91A41CD9296300BCF758 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83A91A21CD9287400BCF758 /* Haneke.framework */; };
 		B84874041C79B5520012497A /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84874021C79B5520012497A /* Welcome.storyboard */; };
 		B84874061C79B64A0012497A /* WelcomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84874051C79B64A0012497A /* WelcomePageController.swift */; };
 		B84874091C7A2E9E0012497A /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84874081C7A2E9E0012497A /* SwiftyUserDefaults.framework */; };
@@ -42,6 +43,7 @@
 		B83A919B1CD9067900BCF758 /* ProductsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsResponse.swift; sourceTree = "<group>"; };
 		B83A919E1CD9105000BCF758 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		B83A919F1CD9105000BCF758 /* ProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		B83A91A21CD9287400BCF758 /* Haneke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Haneke.framework; path = Carthage/Build/iOS/Haneke.framework; sourceTree = "<group>"; };
 		B84874031C79B5520012497A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Welcome.storyboard; sourceTree = "<group>"; };
 		B84874051C79B64A0012497A /* WelcomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageController.swift; sourceTree = "<group>"; };
 		B84874081C7A2E9E0012497A /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83A91A41CD9296300BCF758 /* Haneke.framework in Frameworks */,
 				B83A91971CD8D24E00BCF758 /* AlamofireObjectMapper.framework in Frameworks */,
 				B83A91981CD8D24E00BCF758 /* ObjectMapper.framework in Frameworks */,
 				B81DC0031CC2C59E00493565 /* Alamofire.framework in Frameworks */,
@@ -79,6 +82,7 @@
 		B83A919D1CD90EB300BCF758 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B83A91A21CD9287400BCF758 /* Haneke.framework */,
 				B83A91951CD8D24E00BCF758 /* AlamofireObjectMapper.framework */,
 				B83A91961CD8D24E00BCF758 /* ObjectMapper.framework */,
 				B81DC0021CC2C59E00493565 /* Alamofire.framework */,
@@ -224,6 +228,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Haneke.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
