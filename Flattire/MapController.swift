@@ -67,6 +67,18 @@ extension MapController: UICollectionViewDataSource {
     }
 }
 
+extension MapController: UICollectionViewDelegate {
+    // MARK: UICollectionViewDelegate
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+//        let product = products[indexPath.row]
+        if let cv = storyboard?.instantiateViewControllerWithIdentifier("ProductController") as? ProductController {
+            cv.product = products[indexPath.row]
+            navigationController?.pushViewController(cv, animated: true)
+        }
+    }
+}
+
 extension MapController: UICollectionViewDelegateFlowLayout {
     // MARK: UICollectionViewDelegateFlowLayout
     
