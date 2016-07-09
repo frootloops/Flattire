@@ -11,6 +11,4 @@ import Alamofire
 
 class UberManager {
     private let manager = Alamofire.Manager.sharedInstance
-    
-    
 }

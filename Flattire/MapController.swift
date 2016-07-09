@@ -14,7 +14,6 @@ import AlamofireObjectMapper
 
 class MapController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var productsCollectionView: UICollectionView!
     
     private let locationManager = CLLocationManager()
     private var needToMoveToUserLocation = true
@@ -51,42 +50,6 @@ class MapController: UIViewController {
     }
 }
 
-extension MapController: UICollectionViewDataSource {
-    // MARK: UICollectionViewDataSource
-    
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return products.count
-    }
-    
-    // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
-
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Product", forIndexPath: indexPath) as? ProductCell else { fatalError() }
-        cell.product = products[indexPath.row]
-        return cell
-    }
-}
-
-extension MapController: UICollectionViewDelegate {
-    // MARK: UICollectionViewDelegate
-    
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-//        let product = products[indexPath.row]
-        if let cv = storyboard?.instantiateViewControllerWithIdentifier("ProductController") as? ProductController {
-            cv.product = products[indexPath.row]
-            navigationController?.pushViewController(cv, animated: true)
-        }
-    }
-}
-
-extension MapController: UICollectionViewDelegateFlowLayout {
-    // MARK: UICollectionViewDelegateFlowLayout
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: 200, height: 100)
-    }
-}
-
 private extension MapController {
     // MARK: - Helpers
     
@@ -95,9 +58,6 @@ private extension MapController {
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion(center: center, span: span)
         mapView.setRegion(region, animated: false)
-        
-        let productCell = UINib(nibName: "ProductCell", bundle: .mainBundle())
-        productsCollectionView.registerNib(productCell, forCellWithReuseIdentifier: "Product")
     }
     
     private func moveToUserLocation() {
@@ -114,7 +74,6 @@ private extension MapController {
             guard let `self` = self else { return }
             if let productsResponse = response.result.value {
                 self.products = productsResponse.products
-                self.productsCollectionView.reloadData()
             }
         }
     }
