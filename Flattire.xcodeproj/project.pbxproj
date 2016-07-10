@@ -25,6 +25,7 @@
 		B8C8369B1C70E4DD00B1A82E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C836991C70E4DD00B1A82E /* Main.storyboard */; };
 		B8C8369D1C70E4DD00B1A82E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8C8369C1C70E4DD00B1A82E /* Assets.xcassets */; };
 		B8C836A01C70E4DD00B1A82E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C8369E1C70E4DD00B1A82E /* LaunchScreen.storyboard */; };
+		B8EB94631D3247D3006DD3B0 /* Flattire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EB94621D3247D3006DD3B0 /* Flattire.swift */; };
 		B8FA8A611C722129004A8DE9 /* Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8FA8A601C722129004A8DE9 /* Debug.plist */; };
 		B8FA8A631C722132004A8DE9 /* AdHoc.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8FA8A621C722132004A8DE9 /* AdHoc.plist */; };
 		B8FA8A651C72213B004A8DE9 /* Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8FA8A641C72213B004A8DE9 /* Release.plist */; };
@@ -54,6 +55,7 @@
 		B8C836AC1C710D7200B1A82E /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = "Config Files/Debug.xcconfig"; sourceTree = "<group>"; };
 		B8C836AE1C710D8300B1A82E /* AdHoc.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = AdHoc.xcconfig; path = "Config Files/AdHoc.xcconfig"; sourceTree = "<group>"; };
 		B8C836B01C710D9200B1A82E /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = "Config Files/Release.xcconfig"; sourceTree = "<group>"; };
+		B8EB94621D3247D3006DD3B0 /* Flattire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flattire.swift; path = Networking/Flattire.swift; sourceTree = "<group>"; };
 		B8FA8A601C722129004A8DE9 /* Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Debug.plist; path = "Config Files/Debug.plist"; sourceTree = "<group>"; };
 		B8FA8A621C722132004A8DE9 /* AdHoc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AdHoc.plist; path = "Config Files/AdHoc.plist"; sourceTree = "<group>"; };
 		B8FA8A641C72213B004A8DE9 /* Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Release.plist; path = "Config Files/Release.plist"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				B8C836AB1C710D3000B1A82E /* Config Files */,
+				B8EB945F1D324770006DD3B0 /* Networking */,
 				B8C836951C70E4DD00B1A82E /* AppDelegate.swift */,
 				B8C836991C70E4DD00B1A82E /* Main.storyboard */,
 				B8C8369C1C70E4DD00B1A82E /* Assets.xcassets */,
@@ -137,6 +140,14 @@
 				B8FA8A641C72213B004A8DE9 /* Release.plist */,
 			);
 			name = "Config Files";
+			sourceTree = "<group>";
+		};
+		B8EB945F1D324770006DD3B0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B8EB94621D3247D3006DD3B0 /* Flattire.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +234,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Haneke.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -242,6 +254,7 @@
 				B81DC0071CC2D47100493565 /* WelcomeController.swift in Sources */,
 				B84874061C79B64A0012497A /* WelcomePageController.swift in Sources */,
 				B83A919A1CD8D35600BCF758 /* UberProduct.swift in Sources */,
+				B8EB94631D3247D3006DD3B0 /* Flattire.swift in Sources */,
 				B81DC00B1CC38A2500493565 /* UberProductsRouter.swift in Sources */,
 				B81DC0091CC3899B00493565 /* UberManager.swift in Sources */,
 				B896FA5A1C79A78C0012DF80 /* MapController.swift in Sources */,

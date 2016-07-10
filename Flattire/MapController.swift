@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 import Alamofire
 import AlamofireObjectMapper
+import Moya
 
 class MapController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
@@ -18,15 +19,24 @@ class MapController: UIViewController {
     private let locationManager = CLLocationManager()
     private var needToMoveToUserLocation = true
     private var products = [UberProduct]()
+    private let provider = MoyaProvider<Flattire>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareForUse()
-        loadProducts()
         
         mapView.delegate = self
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
+        
+        provider.request(.TokenRequest("+79999808630")) { result in
+            switch result {
+            case .Success(let response):
+                print(response)
+            case .Failure(let error):
+                print(error)
+            }
+        }
     }
     
     // MARK: - Actions
@@ -68,15 +78,6 @@ private extension MapController {
         mapView.setRegion(region, animated: true)
     }
     
-    private func loadProducts() {
-        let request = Alamofire.request(UberProductsRouter.Get(55.752411, 37.625886))
-        request.responseObject { [weak self] (response: Response<ProductsResponse, NSError>) in
-            guard let `self` = self else { return }
-            if let productsResponse = response.result.value {
-                self.products = productsResponse.products
-            }
-        }
-    }
 }
 
 extension MapController: MKMapViewDelegate {
