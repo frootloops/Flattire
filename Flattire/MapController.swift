@@ -12,6 +12,7 @@ import CoreLocation
 import Alamofire
 import AlamofireObjectMapper
 import Moya
+import PhoneNumberKit
 
 class MapController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
@@ -29,7 +30,8 @@ class MapController: UIViewController {
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         
-        provider.request(.TokenRequest("+79999808630")) { result in
+        let phone = try! PhoneNumber(rawNumber: "+79999808630")
+        provider.request(.TokenRequest(phone)) { result in
             switch result {
             case .Success(let response):
                 print(response)

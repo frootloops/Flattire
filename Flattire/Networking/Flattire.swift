@@ -9,12 +9,12 @@
 import Foundation
 import CoreLocation
 import Moya
+import PhoneNumberKit
 
 enum Flattire {
-    typealias Phone = String
     typealias Code = String
     
-    case TokenRequest(Phone), Token(Code), Location(CLLocationCoordinate2D)
+    case TokenRequest(PhoneNumber), Token(Code), Location(CLLocationCoordinate2D)
 }
 
 extension Flattire: TargetType {
@@ -45,7 +45,7 @@ extension Flattire: TargetType {
     
     var parameters: [String: AnyObject]? {
         switch self {
-        case .TokenRequest(let phone): return ["phone": phone]
+        case .TokenRequest(let phone): return ["phone": phone.toE164()]
         case .Token(let code): return ["code": code]
         case .Location(let location): return [ "latitude": location.latitude, "longitude": location.longitude ]
         }
