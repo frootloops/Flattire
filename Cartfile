@@ -1,4 +1,5 @@
-github "radex/SwiftyUserDefaults"
+github "Moya/Moya"
 github "Alamofire/Alamofire"
+github "radex/SwiftyUserDefaults"
 github "tristanhimmelman/AlamofireObjectMapper"
 github "Haneke/HanekeSwift"

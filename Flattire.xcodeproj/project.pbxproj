@@ -222,6 +222,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Haneke.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
