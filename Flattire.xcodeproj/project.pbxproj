@@ -235,6 +235,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Haneke.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PhoneNumberKit.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
