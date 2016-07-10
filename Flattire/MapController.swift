@@ -20,7 +20,6 @@ class MapController: UIViewController {
     private let locationManager = CLLocationManager()
     private var needToMoveToUserLocation = true
     private var products = [UberProduct]()
-    private let provider = MoyaProvider<Flattire>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +30,7 @@ class MapController: UIViewController {
         locationManager.requestAlwaysAuthorization()
         
         let phone = try! PhoneNumber(rawNumber: "+79999808630")
-        provider.request(.TokenRequest(phone)) { result in
+        FlattireProvider.request(.TokenRequest(phone)) { result in
             switch result {
             case .Success(let response):
                 print(response)

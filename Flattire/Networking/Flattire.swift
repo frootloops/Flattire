@@ -12,9 +12,7 @@ import Moya
 import PhoneNumberKit
 
 enum Flattire {
-    typealias Code = String
-    
-    case TokenRequest(PhoneNumber), Token(Code), Location(CLLocationCoordinate2D)
+    case TokenRequest(PhoneNumber), Token(String), Location(CLLocationCoordinate2D)
 }
 
 extension Flattire: TargetType {
